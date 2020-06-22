@@ -1,0 +1,360 @@
+@charset "UTF-8";
+body {
+  color: #082B48;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+li {
+  text-decoration: none;
+}
+
+p {
+  color: #082B48;
+}
+
+p:hover {
+  opacity: 0.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*==================================
+header
+==================================*/
+header {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 80px;
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav li:hover > ul.drop-menu {
+  perspective: 1000px;
+}
+
+.header-nav li:hover > ul.drop-menu li {
+  display: block;
+  opacity: 0;
+}
+
+.header-nav li:hover > ul.drop-menu li:nth-child(1) {
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-delay: -150ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.header-nav li:hover > ul.drop-menu li:nth-child(2) {
+  animation-name: menu;
+  animation-duration: 600ms;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.header-nav li:hover > ul.drop-menu li:nth-child(3) {
+  animation-name: menu;
+  animation-duration: 900ms;
+  animation-delay: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateY(0px);
+  }
+}
+
+.header-nav-item {
+  margin-left: 50px;
+}
+
+.header-nav-item p {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.header-nav-item ul.drop-down li {
+  background-color: #082B48;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 3px;
+}
+
+.header-nav-item ul.drop-down li a {
+  color: #e3fcf4;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.header-nav-item ul.drop-menu li {
+  display: none;
+  background-color: #082B48;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 3px;
+}
+
+.header-nav-item ul.drop-menu li a {
+  color: #e3fcf4;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+/*==================================
+top
+==================================*/
+.top {
+  background-image: url(../img/main-vsual-nontitle.png);
+  background-size: cover;
+  padding: 80px 0;
+  margin-top: 80px;
+}
+
+.top-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.top-subtitle {
+  font-size: 18px;
+  text-align: center;
+}
+
+/*==================================
+section共通クラス
+==================================*/
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/*==================================
+about
+==================================*/
+.about-left {
+  float: left;
+  width: 48%;
+}
+
+.about-right {
+  float: right;
+  width: 48%;
+}
+
+/*==================================
+course
+==================================*/
+.course {
+  background-color: #e3fcf4;
+}
+
+.course-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-item {
+  width: 30%;
+}
+
+/*==================================
+contact     
+==================================*/
+.contact-message {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="email"] {
+  width: 600px;
+  border: 3px solid #d8d8d8;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  padding: 15px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 20px 60px;
+  display: inline-block;
+  background-color: #082B48;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.btn-register {
+  background-color: #ec6d64;
+  display: block;
+  margin: auto;
+}
+
+/*==================================
+footer
+==================================*/
+footer {
+  background-color: #082B48;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.copyright {
+  font-size: 12px;
+  float: right;
+}
+
+/*==================================
+スマホ用の表示
+==================================*/
+@media only screen and (max-width: 767px) {
+  .clear::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  /*==================================
+header
+==================================*/
+  .header-left {
+    float: none;
+  }
+  .header-title {
+    text-align: center;
+  }
+  .header-right {
+    float: none;
+  }
+  .header-nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .header-nav-item {
+    float: none;
+    margin: 0;
+  }
+  /*==================================
+    top
+    ==================================*/
+  .top {
+    padding: 120px 0;
+  }
+  .top-title {
+    font-size: 32px;
+  }
+  .top-subtitle {
+    font-size: 14px;
+  }
+  /*==================================
+    section共通クラス
+    ==================================*/
+  .section {
+    padding: 80px 0;
+  }
+  .section p {
+    font-size: 14px;
+  }
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  /*==================================
+    about
+    ==================================*/
+  .about-left {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .about-right {
+    float: none;
+    width: 100%;
+  }
+  /*==================================
+    course
+    ==================================*/
+  .course-wrapper {
+    flex-wrap: wrap;
+  }
+  .course-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  /*==================================
+    contact
+    ==================================*/
+  input[type="email"] {
+    width: 100%;
+  }
+  /*==================================
+    copyright
+    ==================================*/
+  .copyright {
+    font-size: 10px;
+    text-align: center;
+    float: none;
+  }
+}
