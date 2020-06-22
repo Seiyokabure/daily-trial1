@@ -15,6 +15,7 @@ li {
 }
 
 p {
+  text-decoration: none;
   color: #082B48;
 }
 
@@ -69,6 +70,7 @@ header {
 }
 
 .header-nav li:hover > ul.drop-menu li {
+  text-decoration: none;
   display: block;
   opacity: 0;
 }
@@ -123,6 +125,7 @@ header {
   text-align: center;
   border-radius: 3px;
   margin-top: 3px;
+  text-decoration: none;
 }
 
 .header-nav-item ul.drop-down li a {
@@ -130,6 +133,7 @@ header {
   font-size: 15px;
   font-weight: 600;
   line-height: 36px;
+  text-decoration: none;
 }
 
 .header-nav-item ul.drop-menu li {
@@ -138,6 +142,7 @@ header {
   text-align: center;
   border-radius: 3px;
   margin-top: 3px;
+  text-decoration: none;
 }
 
 .header-nav-item ul.drop-menu li a {
@@ -145,6 +150,7 @@ header {
   font-size: 15px;
   font-weight: 600;
   line-height: 36px;
+  text-decoration: none;
 }
 
 /*==================================
